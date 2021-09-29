@@ -1,5 +1,7 @@
 > A block manager for lemonbar
 
+![example](assets/example.png)
+
 # Installation
 ```bash
 $ git clone https://github.com/Murtaza-Udaipurwala/lemonaid
