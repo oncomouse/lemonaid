@@ -1,0 +1,20 @@
+#!/bin/sh
+
+status="$(pulseaudio-ctl full-status)"
+vol="$(echo $status | cut -d' ' -f1)"
+mute="$(echo $status | cut -d' ' -f2)"
+if [ "$mute" = "yes" ]
+then
+	printf ""
+else
+	if [ "$vol" -ge 80 ]
+	then
+		symbol=""
+	elif [ "$vol" -ge 50 ]
+	then
+		symbol=""
+	else
+		symbol=""
+	fi
+	echo "$symbol$vol"
+fi

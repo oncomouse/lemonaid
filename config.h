@@ -1,11 +1,11 @@
-static const unsigned short int left = 9;      // no. of left aligned blocks
+static const unsigned short int left = 7;      // no. of left aligned blocks
 static const unsigned short int centre = 0;    // no. of centre aligned blocks
 static const unsigned short int right = 1;    // no. of right aligned blocks
 
 static const Block blocks[] = {
     {
-        "lemonbar_crypto",      // command
-        3600,                   // update interval
+        "cpu",                  // command
+        10,                     // update interval
         1,                      // update signal
         NULL,                   // bg color
         NULL,                   // fg color
@@ -15,7 +15,7 @@ static const Block blocks[] = {
     },
 
     {
-        "lemonbar_cpu",
+        "mem",
         60,
         2,
         NULL,
@@ -26,8 +26,8 @@ static const Block blocks[] = {
     },
 
     {
-        "lemonbar_mem",
-        60,
+        "cpu-tempt",
+        10,
         3,
         NULL,
         NULL,
@@ -37,8 +37,8 @@ static const Block blocks[] = {
     },
 
     {
-        "lemonbar_cpu-tempt",
-        60,
+        "vol",
+        0,
         4,
         NULL,
         NULL,
@@ -48,8 +48,8 @@ static const Block blocks[] = {
     },
 
     {
-        "lemonbar_unread_mail",
-        3600,
+        "brightness-indicator",
+        0,
         5,
         NULL,
         NULL,
@@ -59,9 +59,9 @@ static const Block blocks[] = {
     },
 
     {
-        "lemonbar_vol",
-        0,
-        10,
+        "battery",
+        60,
+        6,
         NULL,
         NULL,
         true,
@@ -70,9 +70,9 @@ static const Block blocks[] = {
     },
 
     {
-        "lemonbar_brightness-indicator",
+        "wifi-indicator",
         0,
-        14,
+        7,
         NULL,
         NULL,
         true,
@@ -81,31 +81,9 @@ static const Block blocks[] = {
     },
 
     {
-        "lemonbar_battery",
+        "clock",
         60,
         8,
-        NULL,
-        NULL,
-        true,
-        false,
-        NULL
-    },
-
-    {
-        "lemonbar_wifi-indicator",
-        0,
-        12,
-        NULL,
-        NULL,
-        true,
-        false,
-        NULL
-    },
-
-    {
-        "lemonbar_clock",
-        60,
-        16,
         NULL,
         NULL,
         true,
