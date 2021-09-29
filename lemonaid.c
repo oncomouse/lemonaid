@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <string.h>
 
-#define CMDLEN 50
+#define CMDLEN 70
 #define LEN(X) sizeof(X)/sizeof(X[0])
 #define FORBLOCKINBLOCKS for (unsigned int i = 0; i < LEN(blocks); i ++)
 
@@ -81,7 +81,7 @@ void run_cmd(unsigned int index, const Block *block, char block_text[]) {
         CMDLEN - delim_length,
         "%s%s%s %s %s%s%s",
         open_bg,
-        close_fg,
+        open_fg,
         open_line,
         buffer,
         close_line,
