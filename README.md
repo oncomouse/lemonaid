@@ -29,8 +29,8 @@ $ sudo make clean uninstall
 ```
 
 # Usage
-- `Lemonaid` simply outputs lemonbar specific formatted text to stdout. You
-  need to then pipe this output into `lemonbar`
+- `Lemonaid` simply outputs text to stdout. You need to then pipe this output
+  into `lemonbar`
 
 - Eg: in your `xinitrc`
 ```bash
@@ -54,3 +54,6 @@ Note that all modules must have different signal numbers.
 ```bash
 $ pkill -RTMIN+10 lemonaid
 ```
+
+Sample scripts are provided in the example folder above.
+For issue/doubt/discussion please open issues.
