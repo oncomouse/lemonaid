@@ -2,6 +2,15 @@
 
 ![example](assets/example.png)
 
+- Lemonaid does not do lemonbar specific formatting for you.
+- This means you yourself have to add the format specifiers for bg, fg,
+  underline, overline, etc. in your shell scripts.
+- This gives the user much more control over how they want to setup their bar.
+  Lemonaid only handles the signals and runs your commands after the specified
+  time interval.
+- This makes lemonaid more akin to the unix philosophy and helps make the
+  codebase lean and clean
+
 # Installation
 ```bash
 $ git clone https://github.com/Murtaza-Udaipurwala/lemonaid
@@ -25,7 +34,7 @@ $ sudo make clean uninstall
 
 - Eg: in your `xinitrc`
 ```bash
-lemonaid | lemonbar -p -d -f "JetBrains Mono Nerd Font:style=medium:size=11" -B "#10151a" &
+lemonaid | lemonbar -p -d -f "JetBrains Mono Nerd Font:style=medium:size=11" -B "#10151a" | $SHELL &
 ```
 
 # Signaling changes
