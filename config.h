@@ -8,10 +8,11 @@
  * codebase lean and clean
  */
 
-static const unsigned short int left = 7;     // no. of left aligned blocks
-static const unsigned short int centre = 0;   // no. of centre aligned blocks
-static const unsigned short int right = 1;    // no. of right aligned blocks
+static const unsigned short int left = 0;     // no. of left aligned blocks
+static const unsigned short int centre = 9;   // no. of centre aligned blocks
+static const unsigned short int right = 0;    // no. of right aligned blocks
 
+// Blocks must be in the order of their alignment
 static const Block blocks[] = {
     // command                  update interval(in s)   update signal
     { "lemonbar_crypto",        3600,                   1 },
