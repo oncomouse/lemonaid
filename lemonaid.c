@@ -78,7 +78,7 @@ void run_cmd(unsigned int index, const Block *block, char block_text[]) {
 
     snprintf(
         block_text,
-        CMDLEN - delim_length,
+        CMDLEN - delim_length - 1,
         "%s%s%s %s %s%s%s",
         open_bg,
         open_fg,
@@ -90,27 +90,28 @@ void run_cmd(unsigned int index, const Block *block, char block_text[]) {
     );
 
     // add the delimeter if block is not the last one
-    if (index != LEN(blocks) - 1) strncat(block_text, delim, delim_length);
+    if (index != LEN(blocks) - 1) strncat(block_text, delim, CMDLEN - strlen(block_text) - 1);
 
     pclose(cmdf);
 }
 
 void write_status() {
-    char buffer[CMDLEN * LEN(blocks)];
+    unsigned int len =  CMDLEN * LEN(blocks);
+    char buffer[len];
 
     unsigned int i = 0;
 
-    strcpy(buffer, "%{l}");
+    strncpy(buffer, "%{l}", len - 1);
     for (; i < left; i ++)
-        strcat(buffer, statusbar[i]);
+        strncat(buffer, statusbar[i], len - strlen(buffer) - 1);
 
-    strcat(buffer, "%{c}");
+    strncat(buffer, "%{c}", len  - strlen(buffer) - 1);
     for (; i < centre + left; i ++)
-        strcat(buffer, statusbar[i]);
+        strncat(buffer, statusbar[i], len - strlen(buffer) - 1);
 
-    strcat(buffer, "%{r}");
+    strncat(buffer, "%{r}", CMDLEN - strlen(buffer) - 1);
     for (; i < right + left + centre; i ++)
-        strcat(buffer, statusbar[i]);
+        strncat(buffer, statusbar[i], len - strlen(buffer) - 1);
 
     fprintf(stdout, "%s", buffer);
     fflush(stdout);
