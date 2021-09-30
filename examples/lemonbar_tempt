@@ -1,0 +1,4 @@
+#!/bin/sh
+
+tempt="$(sensors | awk '/^Tdie/ { print $2 }')"
+echo "%{B#21262d}%{F#ea6962}%{+u} $tempt %{-u}%{F}%{B}"

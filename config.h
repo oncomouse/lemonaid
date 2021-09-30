@@ -14,21 +14,15 @@ static const unsigned short int right = 1;    // no. of right aligned blocks
 
 static const Block blocks[] = {
     // command                  update interval(in s)   update signal
-    { "cpu",                    10,                     1 },
-
-    { "mem",                    60,                     2 },
-
-    { "cpu-tempt",              10,                     3 },
-
-    { "vol",                    0,                      4 },
-
-    { "brightness-indicator",   0,                      5 },
-
-    { "battery",                60,                     6 },
-
-    { "wifi-indicator",         0,                      7 },
-
-    { "clock",                  60,                     8 },
+    { "lemonbar_crypto",        3600,                   1 },
+    { "lemonbar_cpu",           10,                     2 },
+    { "lemonbar_mem",           60,                     3 },
+    { "lemonbar_tempt",         10,                     4 },
+    { "lemonbar_vol",           0,                      5 },
+    { "lemonbar_brightness",    0,                      6 },
+    { "lemonbar_battery",       60,                     7 },
+    { "lemonbar_wifi",          0,                      8 },
+    { "lemonbar_clock",         60,                     9 },
 };
 
 // sets delimeter between status commands. NULL character ('\0') means no delimeter.

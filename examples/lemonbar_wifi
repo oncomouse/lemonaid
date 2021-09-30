@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ "$(nmcli radio wifi)" = "disabled" ] && symbol="" || symbol=""
+echo "%{A:$TERMINAL -e nmtui:}%{B#21262d}%{F#add7ad}%{+u} $symbol %{-u}%{F}%{B}%{A}"

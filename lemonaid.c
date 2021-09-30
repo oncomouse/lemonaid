@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <string.h>
 
-#define CMDLEN 100
+#define CMDLEN 110
 #define LEN(X) sizeof(X)/sizeof(X[0])
 #define FORBLOCKINBLOCKS for (unsigned int i = 0; i < LEN(blocks); i ++)
 

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+datetime="$(date '+%b %d (%a) %R')"
+echo "%{B#21262d}%{F#ed70e3}%{+u}  $datetime %{-u}%{F}%{B}"

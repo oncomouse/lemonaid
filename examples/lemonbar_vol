@@ -5,9 +5,9 @@ vol="$(echo $status | cut -d' ' -f1)"
 mute="$(echo $status | cut -d' ' -f2)"
 if [ "$mute" = "yes" ]
 then
-	printf ""
+	echo "%{A:pavucontrol:}%{B#21262d}%{F#89b482}%{+u}  %{-u}%{F}%{B}%{A}"
 else
-	if [ "$vol" -ge 80 ]
+	if [ "$vol" -ge 100 ]
 	then
 		symbol=""
 	elif [ "$vol" -ge 50 ]
@@ -16,5 +16,5 @@ else
 	else
 		symbol=""
 	fi
-	echo "$symbol$vol"
+	echo "%{A:pavucontrol:}%{B#21262d}%{F#89b482}%{+u} $symbol$vol %{-u}%{F}%{B}%{A}"
 fi

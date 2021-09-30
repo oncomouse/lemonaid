@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ram_used="$(free -h | awk '/^Mem/ { print $3 }')"
+echo "%{A:$TERMINAL -e htop:}%{B#21262d}%{F#a9b665}%{+u} MEM:$ram_used %{-u}%{F}%{B}%{A}"

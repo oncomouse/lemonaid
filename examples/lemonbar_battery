@@ -13,9 +13,11 @@ elif [ "$capacity" -ge 40 ]
 then
     symbol=""
 
-elif [ "$capacity" -ge 10 ]
+elif [ "$capacity" -ge 20 ]
 then
     symbol=""
+else
+    symbol=""
 fi
-echo "$symbol $capacity%"
+echo "%{B#21262d}%{F#a9b665}%{+u} $symbol $capacity% %{-u}%{F}%{B}"
 unset symbol
